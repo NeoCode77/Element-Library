@@ -56,24 +56,39 @@
 ## Text Area Input
 
 ```html
-<div class="input-container">
-    <textarea class="input-textarea" cols="30" rows="10" placeholder="massage"></textarea>
+<div class="textarea-container">
+    <span class="textarea-logo" >massage</span>
+    <textarea  class="input-textarea" cols="20" rows="10" placeholder="massage"></textarea>
 </div>
 ```
 
 ```css
-.input-container {
-    position: relative;
+.textarea-container {
     display: flex;
     align-items: stretch;
-    width: 100%;
+    flex-direction: column;
+    width:100%;
+    margin-bottom: 10px;
 }
 
-
-
+.textarea-logo {
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e8e9eb;
+    border: 1px solid #ced4da;
+    border-radius:  0.375rem 0.375rem  0rem 0rem;
+}
+  
 .input-textarea {
-    display: inline;
-    width: 100%;
+    display: block;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -83,10 +98,13 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
-    border-radius: 0.375rem;
+    border-radius: 0px 0px 0.375rem 0.375rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
+    resize: none;
+    border-top: none;
+    font-family: "Poppins";
+  }
+  
 .input-textarea:focus{
     border-color: #ced4da;
     outline: 0;
